@@ -6,8 +6,7 @@ extract isodate pip copypath fzf bd)
 # Activate certain plugins only when distro is arch
 if [ "$DISTRO" = 'arch' ]; then plugins+=(archlinux); fi
 
-# Which theme to choose (best: lambda, lambda-custom, simple)
-ZSH_THEME="lambda-custom"
+ZSH_THEME="simple"
 
 # Uncomment the following line to use case-sensitive completion.
 #CASE_SENSITIVE="true"
@@ -22,7 +21,7 @@ DISABLE_UPDATE_PROMPT="false"
 COMPLETION_WAITING_DOTS="true"
 
 # tmux plugin options
-ZSH_TMUX_AUTOSTART=false
+ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_UNICODE=true
 
 # Enable zsh directory stack
@@ -39,7 +38,7 @@ autoload -U compinit; compinit
 
 # History settings
 HISTSIZE=10000
-SAVEHIST=10000
+SAVEHIST=100
 HISTFILE="$HOME/.zsh_history"
 setopt appendhistory
 setopt EXTENDED_HISTORY          # Write the history file in the ':start:elapsed;command' format.
@@ -91,13 +90,4 @@ zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
 
 source "$HOME/.aliases"
-
-# Enable auto darkmode when using konsole
-if [ "$KONSOLE_DBUS_WINDOW" ]; then
-	if [ "$(detect-darkmode)" = 'light' ]; then
-		konsoleprofile Colorscheme=BreezeLight
-	else
-		konsoleprofile Colorscheme=MonokaiKonsole
-	fi
-fi
 
