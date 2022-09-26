@@ -16,9 +16,3 @@
 [submodule ".config/zsh/plugins/bd"]
 	path = .config/zsh/plugins/bd
 	url = https://github.com/Tarrasch/zsh-bd
-[submodule "scripts"]
-	path = scripts
-	url = git@github.com:Codedotexe/scripts.git
-[submodule "cheatsheets"]
-	path = cheatsheets
-	url = git@github.com:Codedotexe/cheatsheets.git
