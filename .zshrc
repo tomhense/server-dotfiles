@@ -36,6 +36,9 @@ setopt globstarshort
 # Disable tmux exiting on ctrl+d
 setopt ignoreeof
 
+# Enable tmux to copy to clipboard
+set -g set-clipboard on
+
 # Enable completion
 autoload -U compinit; compinit
 
