@@ -33,6 +33,9 @@ setopt PUSHD_SILENT         # Do not print the directory stack after pushd or po
 # Enable recursive globs (e.g. **.txt)
 setopt globstarshort
 
+# Disable tmux exiting on ctrl+d
+setopt ignoreeof
+
 # Enable completion
 autoload -U compinit; compinit
 
@@ -90,4 +93,3 @@ zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
 
 source "$HOME/.aliases"
-
