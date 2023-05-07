@@ -80,4 +80,5 @@ nnoremap <F3> :NERDTreeToggle<CR>
 " --------- Colorscheme -----------
 let g:rehash256 = 1
 let g:onedark_termcolors = 256
+colorscheme molokai
 
