@@ -16,3 +16,6 @@
 [submodule ".config/zsh/plugins/bd"]
 	path = .config/zsh/plugins/bd
 	url = https://github.com/Tarrasch/zsh-bd
+[submodule ".tmux/plugins/tpm"]
+	path = .tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm

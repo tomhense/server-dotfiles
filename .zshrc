@@ -60,8 +60,8 @@ setopt HIST_VERIFY               # Do not execute immediately upon history expan
 # Load oh-my-zsh (position of this line in .zshrc is not arbitary)
 source $ZSH/oh-my-zsh.sh
 
-# Use vim keybindings
-bindkey -v
+# Use emacs keybindings (vim keybindings interfere with tmux)
+bindkey -e
 export KEYTIMEOUT=1
 
 # Further keybindgs
@@ -94,5 +94,8 @@ done
 autoload -Uz edit-command-line
 zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
+
+# Force bind Ctrl+R command search keybinding
+#bindkey '^R' history-incremental-search-backward
 
 source "$HOME/.aliases"
