@@ -26,7 +26,7 @@ NPM_PACKAGES="${XDG_DATA_HOME:-$HOME/.local/share}/.npm-packages"
 NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 
 # Path
-export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$NPM_PACKAGES/bin:/opt/cuda/bin:/usr/bin/sbin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/scripts:$HOME/.cargo/bin:$NPM_PACKAGES/bin:/opt/cuda/bin:/usr/bin/sbin:/root/.local/bin:$PATH"
 
 # Editor
 export VISUAL=nvim
@@ -39,4 +39,8 @@ export GRADLE_USER_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/gradle"
 export CUDA_CACHE_PATH="${XDG_CACHE_HOME:-$HOME/.cache}/nv"
 export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
 export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/npm/npmrc"
+
+# If not set may cause overlapping autocomplete in zsh+tmux
+export LC_ALL="en_US.UTF-8"
+
 
